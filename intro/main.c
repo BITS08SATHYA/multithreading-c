@@ -6,6 +6,20 @@
 #include <pthread.h>
 #include <unistd.h>
 
+static void *thread_fn_callback(void *arg){
+
+    char *input = (char *) arg;
+
+    int count = 0;
+
+    while(count < 10){
+        printf("Input string = %s\n", input);
+        sleep(1);
+        count++;
+    }
+
+}
+
 void thread1_create(){
 
     pthread_t pthread1;
