@@ -44,6 +44,7 @@ int main(int argc, char **argv){
 
     thread1_create();
     printf("Main fun paused\n");
-    pause();
+//    pause();
+    pthread_exit(0);
     return 0;
 }
